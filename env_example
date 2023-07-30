@@ -1,1 +1,5 @@
 Environment Example
+Title = "Integration Example"
+Company = "MyCompany"
+Url = "http://localhost:3000"
+Email = "support@example.com"

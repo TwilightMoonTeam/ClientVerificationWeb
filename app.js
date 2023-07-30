@@ -3,7 +3,8 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const helmet = require("helmet");
+require('dotenv').config();
+// const helmet = require("helmet");
 
 const indexRouter = require('./routes/index');
 const oauthRouter = require('./routes/oauth');
@@ -19,7 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(helmet({
+/*app.use(helmet({
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
@@ -31,7 +32,7 @@ app.use(helmet({
       includeSubDomains: true,
     },
   },
-}));
+}));*/
 
 app.use('/', indexRouter);
 app.use('/oauth', oauthRouter);
@@ -50,7 +51,7 @@ app.use(async (err, req, res, next) => {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error', { Title: process.env.Title, Company: process.env.Company, Url: process.env.Url, Email: process.env.Email });
 });
 
 module.exports = app;
