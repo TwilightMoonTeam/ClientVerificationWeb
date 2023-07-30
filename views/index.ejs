@@ -5,6 +5,7 @@
     <title><%= Title %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="<%= Url %>/favicon.ico" />
   </head>
   <body>
     <div class="bg-white">
@@ -14,59 +15,76 @@
             <span class="sr-only"><%= Company %></span>
             <img class="h-8 w-auto" src="<%= Url %>/images/logo.svg" alt="">
           </a>
-          <div class="flex lg:hidden">
-            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-              <span class="sr-only">Open main menu</span>
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-            </button>
-          </div>
-          <div class="hidden lg:flex lg:gap-x-12">
+          <div class="lg:flex lg:gap-x-12">
             <a href="<%= Url %>/interlocking-procedure" class="text-sm font-semibold leading-6 text-gray-900">연동방법</a>
             <a href="<%= Url %>/terms-of-use" class="text-sm font-semibold leading-6 text-gray-900">이용약관</a>
             <a href="<%= Url %>/privacy-policy" class="text-sm font-semibold leading-6 text-gray-900">개인정보처리방침</a>
-            <a href="<%= Url %>/license" class="text-sm font-semibold leading-6 text-gray-900">라이센스</a>      
-            <a href="<%= Url %>" class="text-sm font-semibold leading-6 text-purple-600">연동하기<span aria-hidden="true">&rarr;</span></a>
+            <a href="<%= Url %>/license" class="text-sm font-semibold leading-6 text-gray-900">라이선스</a>      
+            <a href="<%= Url %>/integration" class="text-sm font-semibold leading-6 text-purple-600">연동하기<span aria-hidden="true">&rarr;</span></a>
           </div>
         </nav>
-        <!-- Mobile menu, show/hide based on menu open state. -->
-        <div class="lg:hidden" role="dialog" aria-modal="true">
-          <!-- Background backdrop, show/hide based on slide-over state. -->
-          <div class="fixed inset-0 z-10"></div>
-          <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div class="flex items-center justify-between">
-              <a href="<%= Url %>" class="-m-1.5 p-1.5">
-                <span class="sr-only"><%= Company %></span>
-                <img class="h-8 w-auto" src="<%= Url %>/images/logo.svg" alt="">
-              </a>
-              <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-                <span class="sr-only">Close menu</span>
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            <div class="mt-6 flow-root">
-              <div class="-my-6 divide-y divide-gray-500/10">
-                <div class="space-y-2 py-6">
-                  <a href="<%= Url %>" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">연동방법</a>
-                  <a href="<%= Url %>" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">이용약관</a>
-                  <a href="<%= Url %>" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">개인정보처리방침</a>
-                  <a href="<%= Url %>" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">라이센스</a>
+      </header>
+      <div class="bg-white">
+        <div class="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20">
+          <div class="mx-auto max-w-7xl pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-40">
+            <div class="px-6 lg:px-0 lg:pt-4">
+              <div class="mx-auto max-w-2xl">
+                <div class="max-w-lg">
+                  <img class="h-11" src="<%= Url %>/images/logo.svg" alt="Your Company">
+                  <h1 class="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">스트리머와 함께하기</h1>
+                  <p class="mt-6 text-lg leading-8 text-gray-600"><%= TwitchName %>님과 함께 마인크래프트 세상 속을 탐험해 보세요. 계정연동 자동화 도구가 시청자 여러분의 참여를 도와드립니다. 불편한 시청자 참여 방법은 이젠 안녕!</p>
+                  <div class="mt-10 flex items-center gap-x-6">
+                    <a href="<%= Url %>/integration" class="rounded-md bg-purple-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600">계정 연동 진행하기</a>
+                    <a href="<%= Url %>/interlocking-procedure" class="text-sm font-semibold leading-6 text-gray-900">연동방법 자세히 알아보기 <span aria-hidden="true">→</span></a>
+                  </div>
                 </div>
-                <div class="py-6">
-                  <a href="<%= Url %>" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-purple-600 hover:bg-gray-50">연동하기</a>
+              </div>
+            </div>
+            <div class="mt-20 sm:mt-24 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
+              <div class="absolute inset-y-0 right-1/2 -z-10 -mr-10 w-[200%] skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 md:-mr-20 lg:-mr-36" aria-hidden="true"></div>
+              <div class="shadow-lg md:rounded-3xl">
+                <div class="bg-purple-500 [clip-path:inset(0)] md:[clip-path:inset(0_round_theme(borderRadius.3xl))]">
+                  <div class="absolute -inset-y-px left-1/2 -z-10 ml-10 w-[200%] skew-x-[-30deg] bg-indigo-100 opacity-20 ring-1 ring-inset ring-white md:ml-20 lg:ml-36" aria-hidden="true"></div>
+                  <div class="relative px-6 pt-8 sm:pt-16 md:pl-16 md:pr-0">
+                    <div class="mx-auto max-w-2xl md:mx-0 md:max-w-none">
+                      <div class="w-screen overflow-hidden rounded-tl-xl bg-gray-900">
+                        <div class="flex bg-gray-800/40 ring-1 ring-white/5">
+                          <div class="-mb-px flex text-sm font-medium leading-6 text-gray-400">
+                            <img class="" src="<%= Url %>/images/MainPage/Minecraft.png">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/10 md:rounded-3xl" aria-hidden="true"></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32"></div>
         </div>
-      </header>
-      <div class="">
-
       </div>
-
+      <footer class="bg-white">
+        <div class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
+          <div class="flex justify-center space-x-6 md:order-2">
+            <a href="<%= TwitchLink %>" class="text-gray-400 hover:text-purple-500">
+              <span class="sr-only">Twitch</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 64 64" aria-hidden="true">
+                <path fill-rule="evenodd" d="M5.7 0L1.4 10.985V55.88h15.284V64h8.597l8.12-8.12h12.418l16.716-16.716V0H5.7zm51.104 36.3L47.25 45.85H31.967l-8.12 8.12v-8.12H10.952V5.73h45.85V36.3zM47.25 16.716v16.716h-5.73V16.716h5.73zm-15.284 0v16.716h-5.73V16.716h5.73z" clip-rule="evenodd" />
+              </svg>
+            </a>
+            <a href="<%= YoutubeLink %>" class="text-gray-400 hover:text-red-500">
+              <span class="sr-only">YouTube</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+          <div class="mt-8 md:order-1 md:mt-0">
+            <p class="text-center text-xs leading-5 text-gray-500">&copy; 2023 <a class="underline hover:text-purple-400" href="<%= TwitchLink %>"><%= Company %></a>, All rights reserved. Designed By <a class="underline hover:text-purple-400" href="https://www.twitch.tv/rorum827">Rorum</a>, Supported By <a class="underline hover:text-purple-400" href="https://www.belleravi.com">Belleravi Crew</a></p>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

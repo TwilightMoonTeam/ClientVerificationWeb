@@ -3,11 +3,13 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const favicon = require('serve-favicon');
+const helmet = require("helmet");
 require('dotenv').config();
-// const helmet = require("helmet");
 
 const indexRouter = require('./routes/index');
 const oauthRouter = require('./routes/oauth');
+const accountRouter = require('./routes/account');
 
 const app = express();
 
@@ -20,7 +22,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-/*app.use(helmet({
+app.use(favicon(path.join(__dirname, 'public',  'favicon.ico')));
+app.use(helmet({
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
@@ -32,10 +35,11 @@ app.use(express.static(path.join(__dirname, 'public')));
       includeSubDomains: true,
     },
   },
-}));*/
+}));
 
 app.use('/', indexRouter);
 app.use('/oauth', oauthRouter);
+app.use('/account', accountRouter);
 
 
 // catch 404 and forward to error handler
@@ -51,7 +55,7 @@ app.use(async (err, req, res, next) => {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error', { Title: process.env.Title, Company: process.env.Company, Url: process.env.Url, Email: process.env.Email });
+  res.render('error', { Title: process.env.Title, Company: process.env.Company, Url: process.env.Url, Email: process.env.Email, TwitchName: process.env.TwitchName, TwitchLink: process.env.TwitchLink, YoutubeLink: process.env.YoutubeLink });
 });
 
 module.exports = app;

@@ -1,5 +1,114 @@
-Environment Example
-Title = "Integration Example"
-Company = "MyCompany"
-Url = "http://localhost:3000"
-Email = "support@example.com"
+# Environment Example
+# 아래 내용을 전부 복사하여 .env 파일을 생성한 후 붙여넣어주세요. 또한 공백이 있으면 안됩니다.
+
+# Title은 웹페이지 표시명입니다.
+Title = "통합 연동 시스템"
+
+# 회사, 팀, 개인 등의 이름을 입력합니다.
+Company = ""
+
+# 웹사이트 도메인을 주소를 입력합니다. https://로 시작해야합니다. (예시: https://game.example.com)
+Url = ""
+
+# 마인크래프트 게임서버의 주소와 포트를 입력합니다. (예시: https://game.example.com:25565)
+MinecraftServer = ""
+
+# 마인크래프트 게임서버의 버전을 입력합니다. (예시: 1.20.1)
+MinecraftVersion = ""
+
+# 디스코드 서버의 초대주소를 입력합니다. (예시: https://discord.gg/a1b2c3d4)
+DiscordInvite = ""
+
+# 본인의 이메일 주소를 입력합니다. (예시: admin@example.com)
+Email = ""
+
+# 본인의 트위치 고유아이디를 입력합니다. Id는 계정의 고유번호이며, UserId와 다릅니다.
+# TwitchId를 모르겠다면 https://streamscharts.com/tools/convert-username에 들어가서 본인이 트위치 로그인할때 사용하는 아이디를 넣고 convert를 눌러주세요.
+# 변환된 숫자가 TwitchId입니다.
+TwitchId = ""
+
+# 본인의 트위치 유저아이디를 입력합니다. User ID는 로그인할 때 사용되는 아이디이며, TwitchId와 다릅니다.
+TwitchUserId = ""
+
+# 본인의 트위치 닉네임을 입력합니다.
+TwitchName = ""
+
+# 본인의 트위치 링크를 입력합니다. (예시: https://www.twitch.tv/username)
+TwitchLink = ""
+
+# 본인의 유튜브 링크를 입력합니다. (예시: https://www.youtube.com/@username)
+YoutubeLink = ""
+
+# 트위치 API에 대한 접근 권한을 설정합니다.
+# https://dev.twitch.tv/ 로 이동후 로그인을 하고, Your Console > 응용프로그램 > 내 응용 프로그램 등록을 클릭합니다.
+# 이름을 입력하고, OAuth Redirect URLs에 https://내도메인/oauth/twitch/callback 을 입력합니다. (예시: https://game.example.com/oauth/twitch/callback)
+# 범주는 Game Integration 또는 Application Integration을 선택합니다. Website Integration도 상관은 없습니다.
+# 애플리케이션이 생성되었다면 클라이언트 ID를 복사해 아래에 넣습니다.
+TwitchClientId = ""
+# 클라이언트 시크릿을 새로 생성하고, 시크릿을 복하새 아래에 넣습니다.
+TwitchClientSecret = ""
+
+# Microsoft API에 대한 접근 권한을 설정합니다.
+# https://portal.azure.com/ 로 이동후 로그인을 하고, Azure Active Directory > 앱 등록 > 새등록을 클릭합니다.
+# 이름을 입력합니다. 단 이름에 "Minecraft", "Xbox", "Xboxlive", "Microsoft", "Mojang" 등의 단어가 들어가선 안됩니다.
+# 지원되는 계정 유형은 "개인 Microsoft 계정만"을 선택합니다.
+# 리디렉션 URI는 웹을 선택하고 https://내도메인/oauth/xboxlive/callback 을 입력합니다. (예시: https://game.example.com/oauth/xboxlive/callback)
+# 애플리케이션을 등록을 누르고 애플리케이션(클라이언트) ID를 복사해 아래에 넣습니다.
+XboxLiveClientId = ""
+# 인증서 및 암호로 이동해 클라이언트 비밀을 선택하고, 새 클리아언트 암호를 눌러 설명을 대략적으로 넣고 추가를 누릅니다.
+# 생성된 값을 아래에 넣습니다.
+XboxLiveClientSecret = ""
+# 앱 사용허가 등록
+# https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR-ajEQ1td1ROpz00KtS8Gd5UNVpPTkVLNFVROVQxNkdRMEtXVjNQQjdXVC4u 로 이동합니다.
+# Yes 를 클릭합니다.
+# Contact Information은 본인의 이메일 주소를 넣습니다.
+# What type of request is this?는 New AppID for Approval을 선택합니다.
+# Application Name은 생성한 애플리케이션 이름을 넣습니다.
+# Application ID는 생성한 애플리케이션 ID를 넣습니다.
+# Tenant ID는 https://portal.azure.com/ 로 이동해 Azure Active Directory > 개요 > 디렉터리(테넌트) ID를 복사해 넣습니다.
+# Associated website or domain는 본인의 도메인 주소를 넣습니다.
+# Justification는 번역기를 사용해 어떤 용도로 이 어플리케이션을 사용할 것인지 설명을 적습니다.
+# Any other information that we should be aware of? 는 적지 않아도 됩니다.
+# 제출을 하고 최대 7일 이내에 적은 이메일 주소로 오는 메일을 기다립니다.
+# Mojang Studios IP Enforcement 에서 온 메일이 있다면 통합 연동 시스템을 가동한 후 연동 테스트를 진행합니다. 만약 Xboxlive 계정을 가져오지 못할 경우 Mojang Studios IP Enforcement에서 또 다른 메일이 올 때까지 기다려야합니다.
+# 최대 21일 정도 소요될 수 있으며, 21일 이내에 해결되지 않으면 앱 사용허가 등록을 처음부터 다시 진행해야 합니다.
+
+
+# MongoDB에 대한 접근 권한을 설정합니다.
+# https://www.mongodb.com/ko-kr 로 이동해서 등록을 클릭합니다.
+# Sign Up을 누르고 Google을 선택합니다. 본인의 구글 계정을 클릭합니다.
+# I accept the Privacy Policy and the Terms of Service 체크박스를 클릭하고 Submit을 누릅니다.
+# What is your goal?은 Build a new project or evaluate if MongoDB will work for my project를 선택합니다.
+# How long have you been developing software with MongoDB?는 New to MongoDB를 선택합니다.
+# What programming language(s) are you building with?는 Javascript / Node.js를 선택합니다.
+# What kind(s) of data will your project use?는 Customer / user profile data를 선택합니다.
+# Will your application include any of the following architectural models?은 Distributed app servers를 선택합니다.
+# Finish를 누릅니다.
+# M0 Free를 선택합니다. AWS Seoul(ap-northeast-2)를 선택합니다.
+# name은 InetgrationCluster를 입력합니다.
+# Create를 누릅니다. captcha를 풀고 다음단계 로 갑니다.
+# username은 IntegrationAdmin을 입력합니다.
+# password는 복사합니다. Create User를 누릅니다.
+# IP Address는 0.0.0.0을 넣고 Description은 All Access Range를 입력하고 Add Entry를 누릅니다.
+# Finish and Close를 누릅니다.
+# Go to Database를 누릅니다.
+# Connect를 누르고, Drivers를 누릅니다. mongodb+srv로 시작하는 부분을 복사해 아래에 넣습니다. Password는 복사했던 비밀번호를 넣습니다.(예시: mongodb+srv://IntegrationAdmin:<password>@inetgrationcluster.********.mongodb.net/?retryWrites=true&w=majority)
+MongoUri = ""
+# Database Name은 IntegrationDatabase를 입력합니다.
+MongoDatabase = ""
+
+# 아래는 수정하지 마세요
+TwitchScopes = "user:read:follows user:read:email"
+TwitchRequestUri = "https://id.twitch.tv/oauth2/authorize?"
+TwitchResponseUri = "https://id.twitch.tv/oauth2/token"
+TwitchAPIUri = "https://api.twitch.tv/helix"
+
+XboxLiveScopes = "XboxLive.signin"
+XboxLiveRequestUri = "https://login.live.com/oauth20_authorize.srf?"
+XboxLiveResponseUri = "https://login.microsoftonline.com/consumers/oauth2/v2.0/token"
+XboxLiveXblUri = "https://user.auth.xboxlive.com/user/authenticate"
+XboxLiveXstsUri = "https://xsts.auth.xboxlive.com/xsts/authorize"
+
+MinecraftRequestUri = "https://api.minecraftservices.com/authentication/login_with_xbox"
+MinecraftOwnerShipUri = "https://api.minecraftservices.com/entitlements/mcstore"
+MinecraftProfileUri = "https://api.minecraftservices.com/minecraft/profile"

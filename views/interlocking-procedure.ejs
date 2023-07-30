@@ -5,6 +5,7 @@
     <title><%= Title %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="<%= Url %>/favicon.ico" />
   </head>
   <body>
     <div class="bg-white">
@@ -14,59 +15,124 @@
             <span class="sr-only"><%= Company %></span>
             <img class="h-8 w-auto" src="<%= Url %>/images/logo.svg" alt="">
           </a>
-          <div class="flex lg:hidden">
-            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-              <span class="sr-only">Open main menu</span>
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-            </button>
-          </div>
-          <div class="hidden lg:flex lg:gap-x-12">
+          <div class="lg:flex lg:gap-x-12">
             <a href="<%= Url %>/interlocking-procedure" class="text-sm font-semibold leading-6 text-gray-900">연동방법</a>
             <a href="<%= Url %>/terms-of-use" class="text-sm font-semibold leading-6 text-gray-900">이용약관</a>
             <a href="<%= Url %>/privacy-policy" class="text-sm font-semibold leading-6 text-gray-900">개인정보처리방침</a>
-            <a href="<%= Url %>/license" class="text-sm font-semibold leading-6 text-gray-900">라이센스</a>      
-            <a href="<%= Url %>" class="text-sm font-semibold leading-6 text-purple-600">연동하기<span aria-hidden="true">&rarr;</span></a>
+            <a href="<%= Url %>/license" class="text-sm font-semibold leading-6 text-gray-900">라이선스</a>      
+            <a href="<%= Url %>/integration" class="text-sm font-semibold leading-6 text-purple-600">연동하기<span aria-hidden="true">&rarr;</span></a>
           </div>
         </nav>
-        <!-- Mobile menu, show/hide based on menu open state. -->
-        <div class="lg:hidden" role="dialog" aria-modal="true">
-          <!-- Background backdrop, show/hide based on slide-over state. -->
-          <div class="fixed inset-0 z-10"></div>
-          <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div class="flex items-center justify-between">
-              <a href="<%= Url %>" class="-m-1.5 p-1.5">
-                <span class="sr-only"><%= Company %></span>
-                <img class="h-8 w-auto" src="<%= Url %>/images/logo.svg" alt="">
-              </a>
-              <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-                <span class="sr-only">Close menu</span>
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </header>
+      <div class="bg-white">
+        <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
+          <p class="text-base font-semibold leading-7 text-indigo-600">Interlocking Procedure</p>
+          <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">계정 연동 안내서</h1>
+          <p class="mt-6 text-xl leading-8">계정 연동을 진행하는 방법에 대해 잘 모르시는 분들을 위해 다음 차례로 안내해 드리겠습니다.</p>
+          <div class="mt-10 max-w-2xl">
+            <p>계정 연동을 진행하는 과정에서 페이지를 이탈하거나 새로고침 해서는 안됩니다.</p>
+            <ul role="list" class="mt-8 max-w-xl space-y-8 text-gray-600">
+              <li class="flex gap-x-3">
+                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
                 </svg>
-              </button>
-            </div>
-            <div class="mt-6 flow-root">
-              <div class="-my-6 divide-y divide-gray-500/10">
-                <div class="space-y-2 py-6">
-                  <a href="<%= Url %>/interlocking-procedure" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">연동방법</a>
-                  <a href="<%= Url %>/terms-of-use" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">이용약관</a>
-                  <a href="<%= Url %>/privacy-policy" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">개인정보처리방침</a>
-                  <a href="<%= Url %>/license" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">라이센스</a>
-                </div>
-                <div class="py-6">
-                  <a href="<%= Url %>" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-purple-600 hover:bg-gray-50">연동하기</a>
-                </div>
-              </div>
-            </div>
+                <span><strong class="font-semibold text-gray-900">1</strong> <%= TwitchName %>님을 팔로우합니다.</span>
+              </li>
+              <li class="flex gap-x-3">
+                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                </svg>
+                <span><strong class="font-semibold text-gray-900">2.</strong> 메인 화면에서 "계정 연동 진행하기" 또는 화면 상단에 "연동하기" 버튼을 클릭합니다.</span>
+              </li>
+              <li class="flex gap-x-3">
+                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                </svg>
+                <span><strong class="font-semibold text-gray-900">3.</strong> Twitch 계정으로 로그인한 후 권한을 부여합니다.</span>
+              </li>
+              <li class="flex gap-x-3 justify-center">
+                <span><img src="<%= Url %>/images/InProPage/ExampleOne.png"></span>
+              </li>
+              <li class="flex gap-x-3">
+                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                </svg>
+                <span><strong class="font-semibold text-gray-900">4.</strong> Microsoft 계정으로 로그인한 후 수락을 누릅니다.</span>
+              </li>
+              <li class="flex gap-x-3 justify-center">
+                <span><img src="<%= Url %>/images/InProPage/ExampleTwo.png"></span>
+              </li>
+              <li class="flex gap-x-3">
+                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
+                </svg>
+                <span><strong class="font-semibold text-gray-900">5.</strong> 계정 연동 진행 결과를 확인합니다.</span>
+              </li>
+              <li class="flex gap-x-3 justify-center">
+                <span><img class="border-solid border-2 border-blue-600" src="<%= Url %>/images/InProPage/ExampleThree.png"></span>
+              </li>
+            </ul>
+            <p class="mt-8">만약 연동 과정에서 문제가 생기면 아래 FAQ의 지시 따라 조치해보세요.</p>
           </div>
         </div>
-      </header>
-      <div class="">
-
+        <div class="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
+          <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900">FAQ</h2>
+          <p class="mt-6 max-w-2xl text-base leading-7 text-gray-600">연동 과정에서 문제가 발생했을 경우 다음과 같은 조치를 취해보세요.</p>
+          <div class="mt-20">
+            <dl class="space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:gap-x-10">
+              <div>
+                <dt class="text-base font-semibold leading-7 text-gray-900">트위치 계정을 가져오지 못했습니다.</dt>
+                <dd class="mt-2 text-base leading-7 text-gray-600">트위치 계정을 가져오지 못한 경우에 생기는 문제입니다. 계정이 정지되었거나 통합 연동 시스템의 오류일 수도 있습니다. 관리자에게 문의해주세요.</dd>
+              </div>
+              <div>
+                <dt class="text-base font-semibold leading-7 text-gray-900">스트리머를 팔로우하고 있지 않습니다.</dt>
+                <dd class="mt-2 text-base leading-7 text-gray-600">스트리머를 팔로우하고 있지 않아 생기는 문제입니다. 팔로우하고 다시 시도해보세요. 간혹 팔로우한지 오랜 시간이 지나 안될 경우도 있습니다. 그럴 경우에는 관리자에게 문의해주세요.</dd>
+              </div>
+              <div>
+                <dt class="text-base font-semibold leading-7 text-gray-900">DB에 데이터를 저장하지 못했습니다.</dt>
+                <dd class="mt-2 text-base leading-7 text-gray-600">데이터베이스에 오류가 생겨 발생하는 문제입니다. 관리자에게 문의해주세요.</dd>
+              </div>
+              <div>
+                <dt class="text-base font-semibold leading-7 text-gray-900">Xbox Live 계정을 가져오지 못했습니다.</dt>
+                <dd class="mt-2 text-base leading-7 text-gray-600">마이크로소프트 로그인 과젱에서 계정 정보를 가져오지 못해 발생하는 문제입니다. 통합 연동 시스템 혹은 한국 정책에 의해 문제가 발생할 수 있습니다. 관리자에게 문의해주세요.</dd>
+              </div>
+              <div>
+                <dt class="text-base font-semibold leading-7 text-gray-900">Xbox Live 계정을 가져오지 못했습니다. (미성년자)</dt>
+                <dd class="mt-2 text-base leading-7 text-gray-600">마이크로소프트에서 한국인 Xbox 계정에 대해 미성년자 정책을 걸어두었습니다. 본인의 부모님이 가진 마이크로소프트 계정에 본인의 계정을 가족으로 등록하고, 부모님이 게임 연령제한을 지정해야 이용가능합니다. <a class="underline text-indigo-600 hover:text-indigo-500" href="https://support.xbox.com/ko-KR/help/family-online-safety/child-accounts/add-family-member-on-xbox-one" target="_blank">자세히 알아보기</a></dd>
+              </div>
+              <div>
+                <dt class="text-base font-semibold leading-7 text-gray-900">마인크래프트 정품 유무를 확인할 수 없습니다.</dt>
+                <dd class="mt-2 text-base leading-7 text-gray-600">마인크래프트 자바에디션의 라이선스를 확인할 수 없어서 생기는 문제입니다. 정품인증 여부를 확인하시고 다시시도해주세요. 계속 같은 문제가 발생한다면 관리자에게 문의해주세요.</dd>
+              </div>
+              <div>
+                <dt class="text-base font-semibold leading-7 text-gray-900">Mojang 계정을 사용중인 경우에는 어떻게 해야하나요?</dt>
+                <dd class="mt-2 text-base leading-7 text-gray-600">모장 계정으로 마인크래프트 사용중인 분들은 2023년 9월 19일 전까지 마이크로소프트 계정으로 마이그레이션 해야합니다. 그러지 않을 경우 게임이용에 제한됩니다.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
       </div>
-
+      <footer class="bg-white">
+        <div class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
+          <div class="flex justify-center space-x-6 md:order-2">
+            <a href="<%= TwitchLink %>" class="text-gray-400 hover:text-purple-500">
+              <span class="sr-only">Twitch</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 64 64" aria-hidden="true">
+                <path fill-rule="evenodd" d="M5.7 0L1.4 10.985V55.88h15.284V64h8.597l8.12-8.12h12.418l16.716-16.716V0H5.7zm51.104 36.3L47.25 45.85H31.967l-8.12 8.12v-8.12H10.952V5.73h45.85V36.3zM47.25 16.716v16.716h-5.73V16.716h5.73zm-15.284 0v16.716h-5.73V16.716h5.73z" clip-rule="evenodd" />
+              </svg>
+            </a>
+            <a href="<%= YoutubeLink %>" class="text-gray-400 hover:text-red-500">
+              <span class="sr-only">YouTube</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+          <div class="mt-8 md:order-1 md:mt-0">
+            <p class="text-center text-xs leading-5 text-gray-500">&copy; 2023 <a class="underline hover:text-purple-400" href="<%= TwitchLink %>"><%= Company %></a>, All rights reserved. Designed By <a class="underline hover:text-purple-400" href="https://www.twitch.tv/rorum827">Rorum</a>, Supported By <a class="underline hover:text-purple-400" href="https://www.belleravi.com">Belleravi Crew</a></p>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
