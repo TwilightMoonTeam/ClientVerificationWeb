@@ -5,6 +5,7 @@
     <title><%= Title %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="<%= Url %>/javascripts/tos.js"></script>
     <link rel="shortcut icon" href="<%= Url %>/favicon.ico" />
   </head>
   <body>
@@ -24,8 +25,141 @@
           </div>
         </nav>
       </header>
-      <div class="">
-
+      <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+        <div class="mx-auto max-w-4xl divide-y divide-gray-900/10">
+          <h2 class="text-2xl font-bold leading-10 tracking-tight text-gray-900">이용약관</h2>
+          <dl class="mt-10 space-y-6 divide-y divide-gray-900/10">
+            <div class="pt-6">
+              <dt>
+                <button type="button" class="flex w-full items-start justify-between text-left text-gray-900" aria-controls="tos-0" aria-expanded="false">
+                  <span class="text-base font-semibold leading-7">통합 연동 시스템 이용약관</span>
+                  <span class="ml-6 flex h-7 items-center">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                    </svg>
+                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                    </svg>
+                  </span>
+                </button>
+              </dt>
+              <dd class="hidden mt-2 pr-12" id="tos-0">
+                <p class="text-base leading-7 text-gray-600">통합 연동 시스템의 이용약관은 라이선스 페이지에 명시되어 있는 기준을 기반합니다. <a class="underline text-indigo-600 hover:text-indigo-500" href="<%= Url %>/license" target="_blank">자세히 알아보기</a></p>
+                <p class="text-base leading-7 text-gray-600">통합 연동 시스템은 자유롭게 사용할 수 있지만, <a class="underline text-indigo-600 hover:text-indigo-500" href="<%= Url %>/privacy-policy" target="_blank">개인정보처리방침</a>에 명시되어 있는 기준을 초과하여 사용해선 안됩니다.</p>
+                <p class="text-base leading-7 text-gray-600">통합 연동 시스템을 사용함에 있어 <a class="underline text-indigo-600 hover:text-indigo-500" href="<%= Url %>/terms-of-use" target="_blank">이용약관</a>, <a class="underline text-indigo-600 hover:text-indigo-500" href="<%= Url %>/privacy-policy" target="_blank">개인정보처리방침</a>, <a class="underline text-indigo-600 hover:text-indigo-500" href="<%= Url %>/license" target="_blank">라이선스</a>를 지키지 않아 발생한 문제의 책임은 통합 연동 시스템을 운영한 자에게 있습니다.</p>
+                <p class="text-base leading-7 text-gray-600">통합 연동 시스템은 후열된 이용약관을 추가로 적용받습니다.</p>
+              </dd>
+            </div>
+            <div class="pt-6">
+              <dt>
+                <button type="button" class="flex w-full items-start justify-between text-left text-gray-900" aria-controls="tos-1" aria-expanded="false">
+                  <span class="text-base font-semibold leading-7">트위치 서비스 이용약관</span>
+                  <span class="ml-6 flex h-7 items-center">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                    </svg>
+                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                    </svg>
+                  </span>
+                </button>
+              </dt>
+              <dd class="hidden mt-2 pr-12" id="tos-1">
+                <p class="text-base leading-7 text-gray-600">통합 연동 시스템을 이용하는 사람들은 트위치 서비스 이용약관을 적용 받습니다. <a class="underline text-indigo-600 hover:text-indigo-500" href="https://www.twitch.tv/p/ko-kr/legal/terms-of-service/#7-license" target="_blank">자세히 알아보기</a></p>
+              </dd>
+            </div>
+            <div class="pt-6">
+              <dt>
+                <button type="button" class="flex w-full items-start justify-between text-left text-gray-900" aria-controls="tos-2" aria-expanded="false">
+                  <span class="text-base font-semibold leading-7">개발자용 트위치 서비스 이용약관</span>
+                  <span class="ml-6 flex h-7 items-center">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                    </svg>
+                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                    </svg>
+                  </span>
+                </button>
+              </dt>
+              <dd class="hidden mt-2 pr-12" id="tos-2">
+                <p class="text-base leading-7 text-gray-600">통합 연동 시스템에 사용되는 API에 대한 이용약관은 개발자용 이용약관을 적용 받습니다. <a class="underline text-indigo-600 hover:text-indigo-500" href="https://www.twitch.tv/p/ko-kr/legal/developer-agreement/20160822/" target="_blank">자세히 알아보기</a></p>
+              </dd>
+            </div>
+            <div class="pt-6">
+              <dt>
+                <button type="button" class="flex w-full items-start justify-between text-left text-gray-900" aria-controls="tos-3" aria-expanded="false">
+                  <span class="text-base font-semibold leading-7">Azure Active Directory 사용 약관</span>
+                  <span class="ml-6 flex h-7 items-center">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                    </svg>
+                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                    </svg>
+                  </span>
+                </button>
+              </dt>
+              <dd class="hidden mt-2 pr-12" id="tos-3">
+                <p class="text-base leading-7 text-gray-600">Minecraft 계정을 가져오기위한 요청을 처리하기 위해서는 Azure AD에서 애플리케이션을 등록해야합니다. 따라서 Azure AD에 대한 이용약관을 적용 받습니다. <a class="underline text-indigo-600 hover:text-indigo-500" href="https://learn.microsoft.com/ko-kr/azure/active-directory/conditional-access/terms-of-use" target="_blank">자세히 알아보기</a></p>
+              </dd>
+            </div>
+            <div class="pt-6">
+              <dt>
+                <button type="button" class="flex w-full items-start justify-between text-left text-gray-900" aria-controls="tos-4" aria-expanded="false">
+                  <span class="text-base font-semibold leading-7">개발자용 마이크로소프트 ID 플랫폼 이용약관</span>
+                  <span class="ml-6 flex h-7 items-center">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                    </svg>
+                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                    </svg>
+                  </span>
+                </button>
+              </dt>
+              <dd class="hidden mt-2 pr-12" id="tos-4">
+                <p class="text-base leading-7 text-gray-600">Azure AD 애플리케이션과 별개로 마이크로소프트의 ID 플랫폼을 사용하기위해서는 별도의 개발자용 이용약관을 적용 받습니다. <a class="underline text-indigo-600 hover:text-indigo-500" href="https://learn.microsoft.com/ko-kr/legal/microsoft-identity-platform/terms-of-use" target="_blank">자세히 알아보기</a></p>
+              </dd>
+            </div>
+            <div class="pt-6">
+              <dt>
+                <button type="button" class="flex w-full items-start justify-between text-left text-gray-900" aria-controls="tos-5" aria-expanded="false">
+                  <span class="text-base font-semibold leading-7">마인크래프트 EULA</span>
+                  <span class="ml-6 flex h-7 items-center">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                    </svg>
+                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                    </svg>
+                  </span>
+                </button>
+              </dt>
+              <dd class="hidden mt-2 pr-12" id="tos-5">
+                <p class="text-base leading-7 text-gray-600">통합 연동 시스템은 마인크래프트와 연동되어 사용되기 때문에 마인크래프트의 EULA를 적용 받습니다. <a class="underline text-indigo-600 hover:text-indigo-500" href="https://www.minecraft.net/ko-kr/eula" target="_blank">자세히 알아보기</a></p>
+              </dd>
+            </div>
+            <div class="pt-6">
+              <dt>
+                <button type="button" class="flex w-full items-start justify-between text-left text-gray-900" aria-controls="tos-6" aria-expanded="false">
+                  <span class="text-base font-semibold leading-7">Mongo DB 클라우드 이용약관</span>
+                  <span class="ml-6 flex h-7 items-center">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                    </svg>
+                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                    </svg>
+                  </span>
+                </button>
+              </dt>
+              <dd class="hidden mt-2 pr-12" id="tos-6">
+                <p class="text-base leading-7 text-gray-600">통합 연동 시스템은 데이터베이스를 Mongo DB를 사용합니다. 따라서 Mongo DB Inc에서 제공하는 클라우드 환경의 MongoDB를 사용하는 경우 클라우드 이용약관을 적용 받습니다. <a class="underline text-indigo-600 hover:text-indigo-500" href="https://www.mongodb.com/cloud-terms-and-conditions" target="_blank">자세히 알아보기</a></p>
+              </dd>
+            </div>
+          </dl>
+        </div>
       </div>
       <footer class="bg-white">
         <div class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
@@ -44,7 +178,7 @@
             </a>
           </div>
           <div class="mt-8 md:order-1 md:mt-0">
-            <p class="text-center text-xs leading-5 text-gray-500">&copy; 2023 <a class="underline hover:text-purple-400" href="<%= TwitchLink %>"><%= Company %></a>, All rights reserved. Designed By <a class="underline hover:text-purple-400" href="https://www.twitch.tv/rorum827">Rorum</a>, Supported By <a class="underline hover:text-purple-400" href="https://www.belleravi.com">Belleravi Crew</a></p>
+            <p class="text-center text-xs leading-5 text-gray-500">&copy; 2023 <a class="underline hover:text-purple-400" href="<%= TwitchLink %>"><%= Company %></a>, All rights reserved. Development and Designed By <a class="underline hover:text-purple-400" href="https://www.twitch.tv/rorum827">Rorum</a>, Development Support By <a class="underline hover:text-purple-400" href="https://www.belleravi.com">Belleravi Crew</a></p>
           </div>
         </div>
       </footer>

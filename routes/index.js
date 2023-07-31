@@ -15,7 +15,7 @@ router.get('/terms-of-use', (req, res) => {
 });
 
 router.get('/privacy-policy', (req, res) => {
-  res.render('privacy-policy', { Title: process.env.Title, Company: process.env.Company, Url: process.env.Url, TwitchName: process.env.TwitchName, TwitchLink: process.env.TwitchLink, YoutubeLink: process.env.YoutubeLink });
+  res.render('privacy-policy', { Title: process.env.Title, Company: process.env.Company, Url: process.env.Url, TwitchName: process.env.TwitchName, TwitchLink: process.env.TwitchLink, YoutubeLink: process.env.YoutubeLink, Email: process.env.Email });
 });
 
 router.get('/license', (req, res) => {
@@ -25,21 +25,6 @@ router.get('/license', (req, res) => {
 router.get('/integration', (req, res) => {
   let redirectUrl = process.env.Url + '/oauth/twitch/login';
   res.redirect(redirectUrl);
-});
-
-router.get('/test', (req, res) => {
-  res.render("account", {
-    Title: process.env.Title,
-    Company: process.env.Company,
-    Url: process.env.Url,
-    TwitchName: process.env.TwitchName,
-    TwitchLink: process.env.TwitchLink,
-    YoutubeLink: process.env.YoutubeLink,
-    Message: "계정 연동에 성공했습니다.",
-    MinecraftVersion: process.env.MinecraftVersion,
-    MinecraftServer: process.env.MinecraftServer,
-    DiscordInvite: process.env.DiscordInvite
-  });
 });
 
 module.exports = router;
