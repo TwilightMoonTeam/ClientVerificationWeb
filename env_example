@@ -71,7 +71,7 @@ XboxLiveClientSecret = ""
 # Any other information that we should be aware of? 는 적지 않아도 됩니다.
 # 제출을 하고 최대 7일 이내에 적은 이메일 주소로 오는 메일을 기다립니다.
 # Mojang Studios IP Enforcement 에서 온 메일이 있다면 통합 연동 시스템을 가동한 후 연동 테스트를 진행합니다. 만약 Xboxlive 계정을 가져오지 못할 경우 Mojang Studios IP Enforcement에서 또 다른 메일이 올 때까지 기다려야합니다.
-# 최대 21일 정도 소요될 수 있으며, 21일 이내에 해결되지 않으면 앱 사용허가 등록을 처음부터 다시 진행해야 합니다.
+# 최대 21일 정도 소요될 수 있으며, 21일 이내에 해결되지 않으면 앱 사용허가 등록을 처음부터 다시 진행해야 합니다. 이떄 What type of request is this?는 Existing AppID for Review/Report 를 선택합니다.
 
 
 # MongoDB에 대한 접근 권한을 설정합니다.
