@@ -41,7 +41,7 @@ YoutubeLink = ""
 
 # 트위치 API에 대한 접근 권한을 설정합니다.
 # https://dev.twitch.tv/ 로 이동후 로그인을 하고, Your Console > 응용프로그램 > 내 응용 프로그램 등록을 클릭합니다.
-# 이름을 입력하고, OAuth Redirect URLs에 https://내도메인/oauth/twitch/callback 을 입력합니다. (예시: https://game.example.com/oauth/twitch/callback)
+# 이름을 입력하고, OAuth Redirect URLs에 https://내도메인/oauth/twitch/callback 과 https://내도메인/oauth/options/callback 을 입력합니다. (예시: https://game.example.com/oauth/twitch/callback)
 # 범주는 Game Integration 또는 Application Integration을 선택합니다. Website Integration도 상관은 없습니다.
 # 애플리케이션이 생성되었다면 클라이언트 ID를 복사해 아래에 넣습니다.
 TwitchClientId = ""
